@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
-import os
-from read_file import *
+from operations import *
 
 
 def main():
@@ -14,7 +13,7 @@ def main():
 
     file_path = args[2]
     option = args[1]
-    res = read_file(file_path, option)
+    res = count_nb_bytes(file_path, option)
     print(f"{res} {file_path}")
 
 

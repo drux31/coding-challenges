@@ -17,7 +17,7 @@ or
 > ccwc **option** **file_path**
 ```
 
-in the third case, you'll have to create an alias in your system (like alias **ccwc='uv run main.py'**).
+in the third case, you'll have to create an alias in your system (like **alias ccwc='uv run main.py'**).
 
 ### step one - simple version
 
