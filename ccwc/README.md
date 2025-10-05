@@ -36,16 +36,16 @@ We created test files to make sure our tool behaves accordingly. The test files 
 
 ```
 > uv run pytest
-===================================================================== test session starts ======================================================================
+================================================= test session starts =========================================================
 platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
 rootdir: /home/drux/projects/coding-challenges/ccwc
 configfile: pyproject.toml
 collected 5 items
 
-test_main.py ....                                                                                                                                         [ 80%]
-test_operations.py .                                                                                                                                      [100%]
+test_main.py ....                                                                                                         [ 80%]
+test_operations.py .                                                                                                      [100%]
 
-====================================================================== 5 passed in 0.03s =======================================================================
+================================================== 5 passed in 0.03s ===========================================================
 
 ```
 
@@ -58,4 +58,21 @@ In this step, the goal is to support the command line option -l that outputs the
 ```
 > ccwc -l resources/test.txt
 7145 resources/test.txt
+```
+
+##### Tests with pytest
+
+Tests results should look like this:
+
+```
+========================================================= test session starts ========================================================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/drux/projects/coding-challenges/ccwc
+configfile: pyproject.toml
+collected 7 items
+
+test_main. .....                                                                                                                [ 71%]
+test_operations.py ..                                                                                                           [100%]
+
+=========================================================== 7 passed in 0.04s ========================================================
 ```
