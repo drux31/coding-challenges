@@ -6,4 +6,4 @@ These challenges are exercises to learn a new programming language or technology
 
 Just follow the link to any of the folder to explore the project.
 
-## Build your own wc tool
+### [Build your own wc tool](https://github.com/drux31/coding-challenges/tree/main/ccwc)
