@@ -19,15 +19,15 @@ or
 
 in the third case, you'll have to create an alias in your system (like **alias ccwc='uv run main.py'**).
 
-### step one - simple version
+### Step one - simple version
 
 ##### implementation
 
 The goal is to write a simple version of wc takes a command line option -c, and ouputs the number of bytes in a given file. Example with our test.txt file:
 
 ```
-> ccwc -c test.txt
-  342190 test.txt
+> ccwc -c resources/test.txt
+  342190 resources/test.txt
 ```
 
 ##### Tests with pytest
@@ -47,4 +47,15 @@ test_operations.py .                                                            
 
 ====================================================================== 5 passed in 0.03s =======================================================================
 
+```
+
+### Step two - number of lines in a file
+
+##### Implementation
+
+In this step, the goal is to support the command line option -l that outputs the number of lines in a file :
+
+```
+> ccwc -l resources/test.txt
+7145 resources/test.txt
 ```

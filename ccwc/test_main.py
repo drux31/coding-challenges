@@ -2,13 +2,22 @@ import pytest
 from main import main
 
 
-def test_main_correct_output(capsys):
+def test_main_count_bytes(capsys):
     test_case = ["main", "-c", "resources/edmag.txt"]
 
-    # test case with the correct output
+    # test case with the correct for counting bytes
     main(test_case)
     captured = capsys.readouterr()
     assert captured.out.strip() == "593788 resources/edmag.txt"
+
+
+def test_main_count_lines(capsys):
+    test_case = ["main", "-l", "resources/edmag.txt"]
+
+    # test case with the correct output for counting bytes
+    main(test_case)
+    captured = capsys.readouterr()
+    assert captured.out.strip() == "9873 resources/edmag.txt"
 
 
 def test_main_incorrect_option():

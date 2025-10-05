@@ -1,9 +1,12 @@
 import pytest
-from operations import count_nb_bytes
+from operations import *
+
+FILE_PATH = "resources/edmag.txt"
 
 
 def test_count_nb_bytes():
-    file_path = "resources/edmag.txt"
-    option1 = "-c"
+    assert count_nb_bytes(FILE_PATH) == 593788
 
-    assert count_nb_bytes(file_path, option1) == 593788
+
+def test_count_nb_lines():
+    assert count_nb_lines(FILE_PATH) == 9873
