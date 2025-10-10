@@ -24,13 +24,8 @@ def main(args=None):
 
         if not check_option(option):
             raise Exception(f"ERROR - Incorrect option provided: {option}")
-        res = 0
-        match option:
-            case "-c":
-                res = count_nb_bytes(file_path)
-            case "-l":
-                res = count_nb_lines(file_path)
-        if res > 0:
+        res = run_op(file_path, option)
+        if res != None:
             print(f"{res} {file_path}")
 
     except IsADirectoryError:
