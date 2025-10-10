@@ -16,17 +16,20 @@ def main(args=None):
         if args == None:
             args = sys.argv
 
-        if len(args) < 3:
-            raise Exception("Usage: ./main.py <option> <path_to_file>")
-
-        file_path = args[2]
-        option = args[1]
-
-        if not check_option(option):
-            raise Exception(f"ERROR - Incorrect option provided: {option}")
-        res = run_op(file_path, option)
-        if res != None:
-            print(f"{res} {file_path}")
+        if len(args) < 2:
+            raise Exception("Usage: ccwc [option] <path_to_file>")
+        elif len(args) == 2:
+            file_path = args[1]
+            nb_lines, nb_words, nb_bytes  = run_op(file_path)
+            print(f"{nb_lines} {nb_words} {nb_bytes} {file_path}")
+        else:
+            file_path = args[2]
+            option = args[1]
+            if not check_option(option):
+                raise Exception(f"ERROR - Incorrect option provided: {option}")
+            res = run_op(file_path, option)
+            if res != None:
+                print(f"{res} {file_path}")
 
     except IsADirectoryError:
         print(f"ERROR - The provided path is a directory: {file_path}")

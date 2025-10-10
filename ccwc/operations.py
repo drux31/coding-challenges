@@ -36,6 +36,17 @@ def run_op(file_path, option=None):
             res = count_nb_words(file)
         case "-m":
             res = count_nb_characters(file)
-
+        case _:
+            file1 = get_file(file_path)
+            file2 = get_file(file_path)
+            file3 = get_file(file_path)
+            a = count_nb_lines(file1)
+            b = count_nb_words(file2)
+            c = count_nb_bytes(file3)
+            file1.close()
+            file2.close()
+            file3.close()
+            res = (a, b, c)
+            #return (count_nb_lines(file), count_nb_words(file), count_nb_bytes(file))
     file.close()
     return res

@@ -137,3 +137,33 @@ test_operations.py ..                                                           
 
 =========================================================== 11 passed in 0.05s ========================================================
 ```
+
+### Step five - default behaviour
+
+##### Implementation
+
+In this step our goal is to support the default option - i.e. no options are provided, which is the equivalent to the -c, -l and -w options:
+
+```
+>ccwc resources/test.txt
+  7145   58164  342190 resource/test.txt
+```
+
+**Note**: If the current locale does not support multibyte characters, this will match the -c option.
+
+##### Tests with pytest
+
+Tests results should look like this:
+
+```
+========================================================= test session starts ========================================================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/drux/projects/coding-challenges/ccwc
+configfile: pyproject.toml
+collected 11 items
+
+test_main. .....                                                                                                                [ 63%]
+test_operations.py ..                                                                                                           [100%]
+
+=========================================================== 11 passed in 0.05s ========================================================
+```
