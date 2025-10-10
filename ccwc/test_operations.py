@@ -24,3 +24,10 @@ def test_count_nb_words():
     file = open_file()
     assert count_nb_words(file) == 97235
     file.close()
+
+
+def test_count_nb_characters():
+    file = open_file()
+    assert count_nb_characters(file) == 585349
+    file.close()
+
