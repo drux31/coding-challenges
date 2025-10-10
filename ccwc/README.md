@@ -104,3 +104,36 @@ test_operations.py ..                                                           
 
 =========================================================== 9 passed in 0.05s ========================================================
 ```
+
+### Step four - number of characters in a file
+
+##### Implementation
+
+In this step our goal is tto support the command line option -m that outputs the number of characters in a given file:
+
+```
+>wc -m resources/test.txt
+  339292 resources/test.txt
+
+>ccwc -m resources/test.txt
+  339292 resources/test.txt
+```
+
+**Note**: If the current locale does not support multibyte characters, this will match the -c option.
+
+##### Tests with pytest
+
+Tests results should look like this:
+
+```
+========================================================= test session starts ========================================================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/drux/projects/coding-challenges/ccwc
+configfile: pyproject.toml
+collected 9 items
+
+test_main. .....                                                                                                                [ 66%]
+test_operations.py ..                                                                                                           [100%]
+
+=========================================================== 9 passed in 0.05s ========================================================
+```

@@ -1,6 +1,6 @@
 # coding-challenges/ccwc/operations.py
 import os
-
+from functools import reduce
 
 def get_file(file_path):
     f = open(file_path, "rb")
@@ -19,6 +19,11 @@ def count_nb_words(file):
     return len(file.read().split())
 
 
+def count_nb_characters(file):
+    text = file.read()
+    return len(text.decode('utf8'))
+
+
 def run_op(file_path, option=None):
     file = get_file(file_path)
     res = None
@@ -29,6 +34,8 @@ def run_op(file_path, option=None):
             res = count_nb_lines(file)
         case "-w":
             res = count_nb_words(file)
+        case "-m":
+            res = count_nb_characters(file)
 
     file.close()
     return res
