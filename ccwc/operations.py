@@ -12,9 +12,8 @@ def count_nb_bytes(file):
 def count_nb_lines(file):
     return sum(1 for line in file)
 
-def count_nb_words(file_path):
-    with open(file_path, "rb") as f:
-        return 
+def count_nb_words(file):
+    return len(file.read().split())
     
 def run_op(file_path, option=None):
     file = get_file(file_path)
@@ -24,6 +23,9 @@ def run_op(file_path, option=None):
             res = count_nb_bytes(file)
         case "-l":
             res = count_nb_lines(file)
+        case "-w":
+            res = count_nb_words(file)
+
     file.close()
     return res
             
