@@ -3,10 +3,16 @@ from operations import *
 
 FILE_PATH = "resources/edmag.txt"
 
+def open_file():
+    return open(FILE_PATH, "rb")
 
 def test_count_nb_bytes():
-    assert count_nb_bytes(FILE_PATH) == 593788
+    file = open_file()
+    assert count_nb_bytes(file) == 593788
+    file.close
 
 
 def test_count_nb_lines():
-    assert count_nb_lines(FILE_PATH) == 9873
+    file = open_file()
+    assert count_nb_lines(file) == 9873
+    file.close
