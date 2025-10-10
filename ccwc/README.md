@@ -76,3 +76,31 @@ test_operations.py ..                                                           
 
 =========================================================== 7 passed in 0.04s ========================================================
 ```
+
+### Step three - number of words in a file
+
+##### Implementation
+
+In this step our goal is to support the command line option -w that outputs the number of words in a given file:
+
+```
+>ccwc -w resources/test.txt
+   58164 resources/test.txt
+```
+
+##### Tests with pytest
+
+Tests results should look like this:
+
+```
+========================================================= test session starts ========================================================
+platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
+rootdir: /home/drux/projects/coding-challenges/ccwc
+configfile: pyproject.toml
+collected 9 items
+
+test_main. .....                                                                                                                [ 66%]
+test_operations.py ..                                                                                                           [100%]
+
+=========================================================== 9 passed in 0.05s ========================================================
+```

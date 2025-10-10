@@ -3,8 +3,10 @@ from operations import *
 
 FILE_PATH = "resources/edmag.txt"
 
+
 def open_file():
     return open(FILE_PATH, "rb")
+
 
 def test_count_nb_bytes():
     file = open_file()
@@ -22,4 +24,3 @@ def test_count_nb_words():
     file = open_file()
     assert count_nb_words(file) == 97235
     file.close()
-
