@@ -9,10 +9,17 @@ def open_file():
 def test_count_nb_bytes():
     file = open_file()
     assert count_nb_bytes(file) == 593788
-    file.close
+    file.close()
 
 
 def test_count_nb_lines():
     file = open_file()
     assert count_nb_lines(file) == 9873
-    file.close
+    file.close()
+
+
+def test_count_nb_words():
+    file = open_file()
+    assert count_nb_words(file) == 97235
+    file.close()
+
