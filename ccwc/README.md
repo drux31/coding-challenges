@@ -160,10 +160,10 @@ Tests results should look like this:
 platform linux -- Python 3.10.12, pytest-8.4.2, pluggy-1.6.0
 rootdir: /home/drux/projects/coding-challenges/ccwc
 configfile: pyproject.toml
-collected 11 items
+collected 12 items
 
-test_main. .....                                                                                                                [ 63%]
+test_main. .....                                                                                                                [ 66%]
 test_operations.py ..                                                                                                           [100%]
 
-=========================================================== 11 passed in 0.05s ========================================================
+=========================================================== 12 passed in 0.07s ========================================================
 ```
