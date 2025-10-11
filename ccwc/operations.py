@@ -2,6 +2,7 @@
 import os
 from functools import reduce
 
+
 def get_file(file_path):
     f = open(file_path, "rb")
     return f
@@ -21,7 +22,7 @@ def count_nb_words(file):
 
 def count_nb_characters(file):
     text = file.read()
-    return len(text.decode('utf8'))
+    return len(text.decode("utf8"))
 
 
 def run_op(file_path, option=None):
@@ -47,6 +48,6 @@ def run_op(file_path, option=None):
             file2.close()
             file3.close()
             res = (a, b, c)
-            #return (count_nb_lines(file), count_nb_words(file), count_nb_bytes(file))
+            # return (count_nb_lines(file), count_nb_words(file), count_nb_bytes(file))
     file.close()
     return res

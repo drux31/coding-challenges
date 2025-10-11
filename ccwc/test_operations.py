@@ -30,4 +30,3 @@ def test_count_nb_characters():
     file = open_file()
     assert count_nb_characters(file) == 585349
     file.close()
-

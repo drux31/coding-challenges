@@ -28,6 +28,7 @@ def test_main_count_words(capsys):
     captured = capsys.readouterr()
     assert captured.out.strip() == "97235 resources/edmag.txt"
 
+
 def test_main_count_default(capsys):
     test_case = ["main", "resources/edmag.txt"]
 
@@ -44,7 +45,6 @@ def test_main_count_characters(capsys):
     main(test_case)
     captured = capsys.readouterr()
     assert captured.out.strip() == "585349 resources/edmag.txt"
-
 
 
 def test_main_incorrect_option():
